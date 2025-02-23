@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+h1{
+    background-image: url("floral.jpg");
+    background-clip: text;
+    background-size: contain;
+    color: transparent;
+}
+#box{
+    font-weight: 700;
+    font-size: 3em;
+    opacity: 0;
+}
+.box1{
+    animation: textAnimate 5.5s linear 0.1s;  
+}
+.box2{
+    animation: textAnimate 5.7s linear 0.3s;  
+}
+.box3{
+    animation: textAnimate 5.9s linear 0.5s;  
+}
+.box4{
+    animation: textAnimate 7.1s linear 0.7s;  
+}
+.box5{
+    animation: textAnimate 7.3s linear 0.9s;  
+}
+@keyframes textAnimate {
+    0%{
+        transform: translatey(-10em);
+        opacity: 0;
+    }
+    12%{
+        transform: translateY(0em);
+        opacity: 0.5;
+    }
+    14%{
+        transform: translateY(1em);
+        opacity: 0.7;
+    }
+    18%{
+        transform: translateY(0em);
+        opacity: 1;
+        
+    }
+    21%{
+        transform: translateY(1em);
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(0em);
+    }
+    80%{
+        opacity: 1;
+    }
+}
+
