@@ -4,28 +4,47 @@
 }
 .box {
     display: flex;
-    justify-content: end;
+    /* justify-content: end; */
+    flex-direction: column;
+    /* flex-direction: column; Stack notifications vertically */
+    align-items: flex-end;  /* Align notifications to the right */
+    position: fixed;             /* Distance from the top */
+    right: 20px;            /* Distance from the right */
+    gap: 10px;
 }
-.notify-Div {
-    visibility: hidden;
+.notifying {
+    /* visibility: hidden; */
     position: fixed;
     height: 4em;
+    opacity: 0;
     width: 14em;
     background-color: #000;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: Animate 1s linear;
+    animation: Animate 8s ease-in-out;
 }
 @keyframes Animate {
     0%{
         opacity: 0;
         transform: translateX(10em);
     }
-    100%{
+    10%{
+        visibility: visible;
+    }
+    50%{
         opacity: 1;
         transform: translateX(0em);
+
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(0em);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(5em);
     }
     
 }
