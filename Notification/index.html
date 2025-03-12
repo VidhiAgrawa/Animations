@@ -19,11 +19,14 @@
     // const noti = document.querySelector(".notify-Div")
     const btn = document.querySelector('button')
     
-    const box = document.createElement("div")
-    box.setAttribute( "class", "box" )
-    document.body.append( box )
-    
+    const divBox = document.createElement("div")
+    divBox.setAttribute( "class", "divBox" )
+    document.body.append( divBox )
+
     btn.addEventListener( "click", () => {
+        const box = document.createElement("div")
+        box.setAttribute( "class", "box" )
+        divBox.append( box )
 
         const notify = document.createElement("div")
         notify.setAttribute( "class", "notifying" )
