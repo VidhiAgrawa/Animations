@@ -3,36 +3,40 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './App.css';
 
+gsap.registerPlugin(ScrollTrigger);
 function App() {
+  
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const contxt = gsap.context( () => {
+      const data = gsap.utils.toArray(".content");
+  
+      gsap.to(data, {
+        xPercent: -100 * (data.length - 1),
+        scrollTrigger: {
+          trigger: ".container",
+          pin: true,
+          scrub: true
+          
+        }
+      });
 
-    // Ensure DOM is ready before running GSAP animation
-    setTimeout(() => {
-      gsap.fromTo(".yellow", { 
-        xPercent: 100,
-        duration: 1,
-        opacity: 0,
-      },
-      {
-        xPercent : 0,
-        opacity : 1
-      }
-    );
+    } ) 
 
-    }, 0);
+    return () => contxt.revert()
 
   }, []);
 
   return (
-    <main>
-      
-      <div className="container">
-        <div className="panel yellow">Yellow</div>
-        {/* <div className="panel red">Red</div>
-        <div className="panel blue">Blue</div> */}
-      </div>
-    </main>
+   <>
+    <div className="heading flex">This is Home</div>
+    <div className="container">
+      <div className="content flex">Panel1</div>
+      <div className="content flex">Panel2</div>
+      <div className="content flex">Panel3</div>
+    </div>
+    <div className="footer flex">footer</div>
+   </>
+
   );
 }
 
