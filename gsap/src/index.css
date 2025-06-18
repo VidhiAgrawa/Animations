@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body, #root{
+  height: 200vh;
+  width: 100vw;
+  background-color: black;
+}
+.cot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.box{
+  height: 10em;
+  aspect-ratio: 1/1;
+  background-color: slategray;
+  border-radius: 40%;
+  position: relative;
+  top: 110vh;
+}
