@@ -1,34 +1,39 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body, #root{
-  height: 100vh;
   width: 100vw;
   background-color: black;
+  overflow-x: hidden;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading, .footer{
+  height: 100vh;
+  width: 100vw;
+  color: white;
 }
 .container{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+.content{
   height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  width: 100vw;
+  flex-shrink: 0;
 }
-.panel{
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+.content:nth-child(1){
+  background-color: rgb(229, 171, 171);
 }
-.yellow{
-  background-color: rgb(255, 255, 255);
-  left: 0;
-
-  z-index: 1;
+.content:nth-child(2){
+  background-color: rgb(199, 114, 114);
 }
-.blue{
-  background-color: blue;
-  /* z-index: 2; */
-}
-.red{
-  background-color: red;
-  /* z-index: 1; */
+.content:nth-child(3){
+  background-color: rgb(145, 82, 82);
 }
