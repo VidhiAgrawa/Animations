@@ -13,8 +13,24 @@ body, #root{
 }
 .chocobars{
   height: 100vh;
-  background-color: aquamarine;
 }
 .bars{
   position: absolute;
+  height: 15em;
+  z-index: 4;
+}
+.bar-img{
+  height: 100%;
+}
+.chocolate-splash-left, .chocolate-splash-right {
+  position: absolute;
+  z-index: 3;
+}
+.splash-right, .splash-left {
+  opacity: 0;
+}
+.chippy{
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
 }
